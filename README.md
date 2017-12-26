@@ -14,6 +14,7 @@
 
 ### References
 http://xrds.acm.org/blog/2017/01/build-natural-language-processing-based-intelligent-assistant-using-python-easy/
+https://nlp.stanford.edu/projects/glove/
 
 ### Future Enhancements
 * Improve number of things the assistant can do.
