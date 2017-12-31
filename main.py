@@ -6,6 +6,7 @@ from nltk.corpus import wordnet
 import similarity
 import wikipedia
 from PyDictionary import PyDictionary
+import pytemperature
 dictionary=PyDictionary()
 weather = Weather()
 
@@ -13,9 +14,9 @@ weather = Weather()
 def get_input():
     #get input from user
     print "Is there anything I can do for you?"
-    query = raw_input( )
-    #query= "what is the definition of artichoke?"
-    #print query
+    #query = raw_input( )
+    query= "climate in Delhi?"
+    print query
     process_query(query)
 
 
@@ -90,9 +91,9 @@ def process_query(query):
         forecast = location.forecast()
         print "Date:",forecast[0].date()
         print "Condition:", forecast[0].text()
-        print "Current:", condition.temp(),"F"
-        print "Highest:",forecast[0].high(),"F"
-        print "Lowest:",forecast[0].low(),"F"
+        print "Current:", str(pytemperature.f2c(int(condition.temp()))),"C"
+        print "Highest:",str(pytemperature.f2c(int(forecast[0].high()))),"C"
+        print "Lowest:",str(pytemperature.f2c(int(forecast[0].low()))),"C"
         
     elif target=='h' or target=='c' or target=='t':
         place = proper_nouns
@@ -102,8 +103,9 @@ def process_query(query):
             place= roi    
         print "Place: ",str(place[0]) 
         location = weather.lookup_by_location(str(place[0]))
-        condition = location.condition()    
-        print "In "+place[0]+", the temperature is: "+ condition.temp(),"F" 
+        condition = location.condition()
+        #print type(int(condition.temp()))    
+        print "In "+place[0]+", the temperature is: "+ str(pytemperature.f2c(int(condition.temp()))),"C" 
 
        
     elif target=='d':

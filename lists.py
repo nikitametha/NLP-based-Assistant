@@ -83,6 +83,6 @@ synonym = ['synonym', 'synonyms', 'homonym', 'abbreviation', 'synonymous', 'like
 
 antonym = ['antonym','antonyms', 'anti', 'dissimilar', 'opposite']
 
-forecast = ['forecast', 'weather', 'report', 'forecasts', 'prediction', 'forecasting', 'predicting', 'estimate', 'analysis', 'forecasters', 'condition']
+forecast = ['forecast', 'weather', 'report', 'forecasts', 'prediction', 'forecasting', 'predicting', 'estimate', 'analysis', 'forecasters', 'condition', 'climate']
 
 definition = ['definition', 'defined', 'definitions', 'defines', 'define', 'defining', 'imply', 'meaning', 'interpretation', 'mean', 'concept']
