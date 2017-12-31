@@ -12,6 +12,8 @@ Download GloVe dataset, and change lines 4 and 5 in ```similarity.py``` as requi
 ### Usage
 
 ```python main.py```
+
+
 ```export PYTHONWARNINGS="ignore"``` to remove dictionary api warnings if needed
 
 
