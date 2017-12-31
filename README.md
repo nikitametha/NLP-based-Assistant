@@ -7,9 +7,12 @@
 
 #### Uses basic NLP for processing input. GloVe embeddings used for word similarity. API calls are made for obtaining weather/definitions/synonyms/antonyms.
 
+Download GloVe dataset, and change lines 4 and 5 in ```similarity.py``` as required. 
 
 ### Usage
+
 ```python main.py```
+```export PYTHONWARNINGS="ignore"``` to remove dictionary api warnings if needed
 
 
 ### References
