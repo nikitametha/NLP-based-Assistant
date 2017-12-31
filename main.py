@@ -5,7 +5,8 @@ from weather import Weather
 from nltk.corpus import wordnet
 import similarity
 import wikipedia
-
+from PyDictionary import PyDictionary
+dictionary=PyDictionary()
 weather = Weather()
 
 
@@ -48,7 +49,7 @@ def process_query(query):
     #print nouns
     #print adjectives
     target = 'null'
-
+    print ""
 
     
     if (len(adjectives)>0):
@@ -102,20 +103,30 @@ def process_query(query):
         print "Place: ",str(place[0]) 
         location = weather.lookup_by_location(str(place[0]))
         condition = location.condition()    
-        print("In "+place[0]+", the temperature is: "+ condition.temp(),"F") 
+        print "In "+place[0]+", the temperature is: "+ condition.temp(),"F" 
 
        
-    elif target=='d': 
+    elif target=='d':
+        definitions = dictionary.meaning(str(roi[0]))           
+        for k,v in definitions.iteritems():
+            for meanings in v:
+                print meanings        
         print wikipedia.summary(str(roi[0]))
         #roi_p = wikipedia.page(str(roi[0]))
         #print roi_p.content
 
     elif target=='s':
+        syn= (dictionary.synonym(str(roi[0])))        
+        for i in  syn:
+            print i        
         #todo synonyms
-        print "syn"
+        #print "syn"
     elif target == 'a':
+        ant= (dictionary.antonym(str(roi[0])))        
+        for i in  ant:
+            print i        
         #todo antonyms
-        print "antonym"
+        #print "antonym"
     else:
         print "Can't process query"
         exit(0)      

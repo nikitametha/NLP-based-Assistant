@@ -79,9 +79,9 @@ rain = ['rain', 'rains', 'torrential', 'downpour', 'rainfall', 'snow', 'weather'
 
 humidity = ['humidity', 'moisture', 'humid',  'precipitation']
 
-synonym = ['synonym', 'synonyms', 'homonym', 'abbreviation', 'synonymous', 'euphemism', 'nomen', 'same', 'similar', 'misnomer', 'interchangeably']
+synonym = ['synonym', 'synonyms', 'homonym', 'abbreviation', 'synonymous', 'like', 'same', 'similar', 'misnomer', 'interchangeably']
 
-antonym = ['antonym', 'anti', 'dissimilar', 'opposite']
+antonym = ['antonym','antonyms', 'anti', 'dissimilar', 'opposite']
 
 forecast = ['forecast', 'weather', 'report', 'forecasts', 'prediction', 'forecasting', 'predicting', 'estimate', 'analysis', 'forecasters', 'condition']
 
